@@ -5,7 +5,7 @@ import cn from 'classnames';
 export const TagDiv = ({ size = 'min', href, color = 'ghost', children, className, ...props }: TagDivProps): JSX.Element => {
 	return (
 		<div
-			className={cn(styles.div, className, {
+			className={cn(styles.tag, className, {
 				[styles.min]: size == 'min',
 				[styles.mid]: size == 'mid',
 				[styles.ghost]: color == 'ghost',

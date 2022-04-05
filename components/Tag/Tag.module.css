@@ -6,8 +6,8 @@
 }
 .min{
 	padding: 5px 10px;
-	font-size: 12px;
-	line-height: 12px;
+	font-size: 13px;
+	line-height: 13px;
 }
 .mid{
 	padding: 5px 10px;
@@ -29,7 +29,7 @@
 }
 .green{
 	color: var(--green);
-	background-color: var(--green-light);
+	background-color: var(--light-green);
 	font-weight: bold;
 }
 .grey{
