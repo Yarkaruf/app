@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import { Button, Htag, TagP, TagDiv, Rating } from '../components'
+import React, { FunctionComponent, useState } from 'react';
+import { Button, Htag, TagP, TagDiv, Rating, } from '../components'
+import { withLayoult } from '../layout/Layout';
 
 
-export default function Home(): JSX.Element {
+function Home(): JSX.Element {
 
   const [Raiting, setRaiting] = useState<number>(4);
 
@@ -21,4 +22,6 @@ export default function Home(): JSX.Element {
       <Rating Raiting={Raiting} isEditable setRaiting={setRaiting}></Rating>
     </>
   );
-}
+};
+
+export default withLayoult(Home);
