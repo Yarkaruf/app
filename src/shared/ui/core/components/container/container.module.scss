@@ -1,0 +1,23 @@
+@import "/src/shared/ui/core/scss/var";
+
+.container {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+}
+
+@media (max-width: $md) {
+  .container {
+    max-width: 708px;
+    padding: 0;
+  }
+}
+
+@media (max-width: $xs) {
+  .container {
+    padding: 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

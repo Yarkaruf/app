@@ -1,0 +1,45 @@
+@import "/src/shared/ui/core/scss/var";
+
+.form {
+  width: 100%;
+  max-width: 648px;
+}
+
+.input {
+  &:not(:last-child) {
+    margin-bottom: 13px;
+  }
+}
+
+.text_area {
+  margin-bottom: 39px;
+  min-height: 274px;
+}
+
+.button {
+  margin-bottom: 27px;
+}
+
+.checkbox {
+  font-weight: 400 !important;
+  font-size: 14px;
+
+  &_wrap {
+    margin-bottom: 46px;
+    align-items: flex-start;
+  }
+}
+
+.text {
+  text-align: center;
+}
+
+.link {
+  margin-left: 5px;
+}
+
+@media (max-width: $md) {
+  .form {
+    max-width: none;
+  }
+}

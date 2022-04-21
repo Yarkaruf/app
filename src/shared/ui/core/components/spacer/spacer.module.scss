@@ -1,0 +1,48 @@
+@import "/src/shared/ui/core/scss/var";
+
+.sm {
+  margin-bottom: 4px;
+
+  &.horizontal {
+    margin-bottom: 0;
+    margin-left: 4px;
+  }
+}
+
+.md {
+  margin-bottom: 16px;
+
+  &.horizontal {
+    margin-bottom: 0;
+    margin-left: 16px;
+  }
+}
+
+.lg {
+  margin-bottom: 48px;
+
+  &.horizontal {
+    margin-bottom: 0;
+    margin-left: 48px;
+  }
+}
+
+.xl {
+  margin-bottom: 80px;
+
+  &.horizontal {
+    margin-bottom: 0;
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: $xs) {
+  .xl {
+    margin-bottom: 40px;
+
+    &.horizontal {
+      margin-bottom: 0;
+      margin-left: 40px;
+    }
+  }
+}

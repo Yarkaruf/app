@@ -1,0 +1,104 @@
+@import "/src/shared/ui/core/scss/var";
+
+.row {
+  display: flex;
+
+  &:not(:last-child) {
+    margin-bottom: 50px;
+    margin-right: 160px;
+  }
+
+  & > *:not(:last-child) {
+    margin-right: 96px;
+  }
+}
+
+.inputs {
+  display: flex;
+  align-items: flex-start;
+}
+
+.label {
+  margin-bottom: 20px;
+  color: $light-text-color;
+}
+
+.text_button {
+  color: $light-text-color !important;
+
+  &.active {
+    color: $text-color !important;
+  }
+
+  &:not(:last-child) {
+    margin-right: 48px;
+  }
+}
+
+.text {
+  color: #3d4a62;
+
+  &:not(:last-child) {
+    margin-right: 48px;
+  }
+}
+
+.checkbox {
+  &:not(:last-child) {
+    margin-right: 24px;
+  }
+}
+
+.mobile_spacer {
+  display: none;
+}
+
+@media (max-width: $md) {
+  .row {
+    align-items: flex-start;
+    margin-bottom: 40px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    & > *:not(:last-child) {
+      margin-right: 100px;
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+      margin-right: 10px;
+    }
+  }
+
+  .inputs {
+    margin-left: -15px;
+    padding-left: 15px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+  }
+
+  .text_button {
+    white-space: nowrap;
+  }
+
+  .mobile_spacer {
+    display: block;
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+  }
+
+  .checkbox {
+    min-width: 105px;
+  }
+}

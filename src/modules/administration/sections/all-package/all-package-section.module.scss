@@ -1,0 +1,156 @@
+@import "/src/shared/ui/core/scss/var";
+
+.section_bc {
+  background-color: #fff;
+  margin-bottom: 40px;
+  padding-top: 30px;
+}
+
+.title {
+  margin-bottom: 15px;
+}
+
+.comment {
+  margin-top: 75px;
+  display: flex;
+  margin-left: 87px;
+  align-items: flex-start;
+}
+
+.note {
+  display: flex;
+}
+
+.listB {
+  width: 50%;
+  padding-left: 79px;
+  .item {
+    display: flex;
+    padding: 16px 10px;
+  }
+}
+
+.list {
+  width: 50%;
+  padding-right: 79px;
+  .item {
+    display: flex;
+    padding: 10px;
+  }
+}
+
+.icon {
+  margin-right: 18px;
+  color: $primary-color;
+  width: 23px;
+  height: 23px;
+
+  path {
+    fill: currentColor !important;
+  }
+}
+
+.description {
+  max-width: 793px;
+}
+
+.no_title_visible {
+  display: none;
+}
+
+.title_visible {
+  display: block;
+  color: #a5b1c8;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+@media (max-width: $md) {
+  .note {
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 100px 0 15px;
+  }
+
+  .listB {
+    width: 100%;
+    padding-left: 0px;
+    .item {
+      padding: 10px;
+    }
+  }
+
+  .list {
+    width: 100%;
+  }
+
+  .section_bc {
+    background-color: #fff;
+    margin-bottom: 40px;
+    padding-top: 30px;
+  }
+
+  .title {
+    margin-bottom: 40px;
+  }
+
+  .comment {
+    max-width: calc(100vw - 156px);
+    margin: 50px auto 0;
+    padding: 0;
+    margin-left: 0;
+  }
+
+  .no_title_visible {
+    display: none;
+  }
+
+  .title_visible {
+    display: block;
+    color: #a5b1c8;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: $xs) {
+  .note {
+    padding: 0;
+  }
+  .section_bc {
+    background-color: #fff;
+    margin-bottom: 40px;
+    padding-top: 30px;
+  }
+
+  .comment {
+    max-width: none;
+    margin: 30px 10px 0;
+  }
+
+  .no_title_visible {
+    display: none;
+  }
+
+  .title_visible {
+    display: block;
+    color: #a5b1c8;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    width: 322px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
+}

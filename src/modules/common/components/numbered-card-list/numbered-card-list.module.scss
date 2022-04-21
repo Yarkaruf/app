@@ -1,0 +1,110 @@
+@import "/src/shared/ui/core/scss/var";
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  background-color: #ffffff;
+  filter: drop-shadow(8px 15px 10px rgba(1, 46, 99, 0.25));
+  border-radius: $radius;
+  padding: 20px 35px;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  &:nth-child(2n) {
+    margin-left: 30px;
+  }
+  &:nth-child(1) {
+    width: 30%;
+  }
+  &:nth-child(2) {
+    width: 67%;
+  }
+  &:nth-child(3) {
+    width: 57%;
+  }
+  &:nth-child(4) {
+    width: 40%;
+  }
+  &:nth-child(5) {
+    width: 100%;
+  }
+  &:nth-child(6) {
+    width: 50%;
+    margin-left: 0;
+  }
+  &:nth-child(7) {
+    width: 47.3%;
+    margin-left: 30px;
+  }
+}
+
+.number {
+  color: $primary-color;
+  flex-shrink: 0;
+  margin-right: 32px;
+}
+
+.title {
+  font-size: 21px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+@media (max-width: $md) {
+  .items {
+    max-width: calc(100vw - 156px);
+  }
+
+  .item {
+    align-items: flex-start;
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: $xs) {
+  .container {
+    display: block;
+  }
+
+  .items {
+    display: block;
+    max-width: none;
+  }
+
+  .item {
+    width: 100%;
+    max-width: none;
+    padding: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .number {
+    margin-right: 20px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .item {
+    display: block;
+  }
+
+  .number {
+    margin: 0 0 10px;
+  }
+}

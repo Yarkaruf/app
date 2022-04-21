@@ -1,0 +1,70 @@
+@import "/src/shared/ui/core/scss/var";
+
+.checkbox {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  display: none;
+
+  & + div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 21px;
+    height: 21px;
+    flex-shrink: 0;
+    margin-right: 12px;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 1px solid #c1cede;
+    position: relative;
+  }
+
+  &:checked {
+    & + div {
+      border-color: $primary-color;
+    }
+  }
+
+  &:disabled {
+    cursor: default !important;
+    & + div {
+      border-color: $light-text-color;
+      > span > svg {
+        color: $light-text-color;
+      }
+    }
+
+    * {
+      cursor: default !important;
+    }
+  }
+}
+
+.check {
+  width: 9px;
+  height: 6px;
+  display: flex;
+  color: $primary-color;
+}
+
+.label {
+  margin-bottom: 0 !important;
+
+  &_disabled {
+    color: $light-text-color;
+    cursor: default;
+  }
+}
+
+@media (max-width: $xs) {
+  .input {
+    & + div {
+      margin-right: 10px;
+      margin-left: 0;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@import "/src/shared/ui/core/scss/var";
+
+.section_advantages_title_vds {
+  margin-bottom: 0px;
+  padding-bottom: 0;
+  font-size: 45px;
+  line-height: 55px;
+  font-weight: 700;
+  max-width: 848px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 205px;
+}
+
+@media (max-width: $md) {
+  .section_advantages_title_vds {
+    margin-bottom: 0px;
+    padding-bottom: 0;
+    font-size: 45px;
+    line-height: 55px;
+    font-weight: 700;
+    max-width: 700px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 170px;
+  }
+  .box {
+    background-color: $hover-color;
+  }
+}
+
+@media (max-width: $xs) {
+  .section_advantages {
+    margin-bottom: -70px;
+  }
+
+  .box {
+    background-color: $hover-color;
+    padding-top: 50px;
+  }
+  .advantage_service {
+    margin-top: -100px;
+  }
+  .section_advantages_title_vds {
+    margin-bottom: 0px;
+    padding-bottom: 0;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    max-width: 336px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 110px;
+  }
+}
+@media (max-width: $sx) {
+  .section_advantages_title_vds {
+    font-size: 23px;
+  }
+}

@@ -1,0 +1,199 @@
+@import "/src/shared/ui/core/scss/var";
+
+.container {
+  width: 100%;
+  position: relative;
+  padding-top: 50%;
+  max-width: 1114px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.mobile_img {
+  display: none;
+}
+
+.item {
+  position: absolute;
+
+  &_1 {
+    top: 15.5%;
+    left: 12.7%;
+  }
+
+  &_2 {
+    top: 17.1%;
+    left: 46.3%;
+  }
+
+  &_3 {
+    top: 11.4%;
+    left: 58.1%;
+  }
+
+  &_4 {
+    top: 17.8%;
+    left: 60.7%;
+  }
+
+  &_5 {
+    top: 25.5%;
+    left: 79.2%;
+  }
+}
+
+.marker {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: rgba($light-text-color, 0.2);
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $light-text-color;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transition: $transition;
+  }
+
+  &.active {
+    background-color: rgba($primary-color, 0.2);
+    cursor: pointer;
+
+    &:after {
+      background-color: $primary-color;
+    }
+
+    &:hover {
+      &:after {
+        width: 90%;
+        height: 90%;
+      }
+    }
+  }
+}
+
+.city {
+  color: $primary-color;
+  font-size: 21px;
+  margin-bottom: 27px;
+}
+
+.address {
+  margin-bottom: 30px;
+}
+
+.info {
+  color: $light-text-color;
+  margin-bottom: 28px;
+}
+
+.datacenter {
+  margin-bottom: 5px;
+}
+
+@media (max-width: $xs) {
+  .container {
+    padding-top: 90%;
+    transform: scale(1.5) translate(0px, 20px);
+  }
+
+  .desktop_img {
+    display: none;
+  }
+
+  .mobile_img {
+    display: block;
+  }
+
+  .item {
+    position: absolute;
+
+    &_1 {
+      top: 15.5%;
+      left: 12.7%;
+      display: none;
+    }
+
+    &_2 {
+      top: 23.1%;
+      left: 31.3%;
+    }
+
+    &_3 {
+      top: 15.4%;
+      left: 56.1%;
+    }
+
+    &_4 {
+      top: 22.8%;
+      left: 62.7%;
+    }
+
+    &_5 {
+      display: none;
+      top: 20.1%;
+      left: 79%;
+    }
+  }
+
+  .marker {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgba($light-text-color, 0.2);
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $light-text-color;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      transition: $transition;
+    }
+
+    &.active {
+      background-color: rgba($primary-color, 0.2);
+      // cursor: pointer;
+
+      &:after {
+        background-color: $primary-color;
+      }
+
+      &:hover {
+        &:after {
+          width: 90%;
+          height: 90%;
+        }
+      }
+    }
+  }
+
+  .city {
+    color: $primary-color;
+    font-size: 16px;
+    margin-bottom: 27px;
+  }
+
+  .address {
+    margin-bottom: 30px;
+    font-size: 12px;
+  }
+
+  .info {
+    color: $light-text-color;
+    margin-bottom: 28px;
+    font-size: 12px;
+  }
+}

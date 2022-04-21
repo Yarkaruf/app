@@ -1,0 +1,101 @@
+@import "/src/shared/ui/core/scss/var";
+
+.section_tariffs_bc {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.container_filter {
+  @media (max-width: $sx) {
+    padding: 0;
+  }
+}
+
+.heading {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 64px;
+  text-align: center;
+  margin-top: 45px;
+}
+
+.filter {
+  display: flex;
+  margin-bottom: 0px;
+  justify-content: center;
+}
+
+.btn_link {
+  display: none;
+}
+
+@media (max-width: $md) {
+  .section_tariffs_bc {
+    background-color: #fff;
+    margin-bottom: 50px;
+  }
+
+  .heading {
+    display: flex;
+    flex-wrap: wrap;
+    width: 558px;
+    margin-bottom: 40px;
+
+    padding-top: 30px;
+  }
+
+  .filter {
+    display: block;
+    max-width: calc(100vw - 156px);
+    margin-left: 40px;
+    margin-right: auto;
+    padding-left: 0;
+  }
+
+  .btn_link {
+    display: none;
+  }
+}
+
+@media (max-width: $xs) {
+  .section_tariffs_bc {
+    background-color: #fff;
+  }
+
+  .heading {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    width: 100vw;
+    margin-bottom: 40px;
+    padding: 0 10px;
+    & div {
+      width: 90% !important;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .filter {
+    display: block;
+    padding-left: 20px;
+    margin-bottom: 0px;
+    margin-left: calc(50% - 50vw + 10px); // TODO need to redesign dedic page
+    max-width: none;
+  }
+
+  .btn_link {
+    display: flex;
+    justify-content: center;
+
+    width: 220px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 16px;
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,138 @@
+@import "/src/shared/ui/core/scss/var";
+
+.placeholder-color {
+  color: $light-text-color;
+}
+
+.primary-color {
+  color: $primary-color;
+}
+
+.active-color {
+  color: $hover-color;
+}
+
+.alert-color {
+  color: $alert-color;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: $font, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100%;
+  background: white;
+  color: $text-color;
+  min-height: calc(100vh - 50px);
+}
+
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+header,
+footer,
+section,
+div,
+span,
+p,
+button,
+a,
+input,
+textarea,
+form {
+  box-sizing: border-box;
+}
+
+button,
+input,
+textarea,
+select {
+  outline: none;
+  font-family: inherit;
+}
+
+.MuiMenu-paper {
+  max-height: 444px;
+  border: 1px solid #c3ccd3;
+  box-sizing: border-box;
+  border-radius: 7px;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  transition: 0.3s;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+  color: $text-color;
+
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+a:focus {
+  outline: none;
+}
+
+form {
+  margin: 0;
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hidden_xs {
+  @media (max-width: $xs) {
+    display: none !important;
+  }
+}
+
+.visible-xs {
+  display: none;
+
+  @media (max-width: $xs) {
+    display: inline-block;
+  }
+}

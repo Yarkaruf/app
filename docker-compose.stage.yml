@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  landing:
+    container_name: medialand-landing
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: gitlab.medialand.pro:4567/medialand/hosting/front/medialand-landing:${REVISION}
+    ports:
+      - 0.0.0.0:8081:3000

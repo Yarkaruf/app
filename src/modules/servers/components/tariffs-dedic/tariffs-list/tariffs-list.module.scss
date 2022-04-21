@@ -1,0 +1,378 @@
+@import "/src/shared/ui/core/scss/var";
+
+.list {
+  margin-bottom: 100px;
+  @media (max-width: $md) {
+    margin-bottom: -165px;
+  }
+  @media (max-width: $xs) {
+    margin-bottom: -170px;
+  }
+}
+.dedic_container {
+  @media (max-width: $xs) {
+    padding: 0;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  padding: 41px 37px 46px 54px;
+  border-radius: $radius;
+  transition: $transition;
+  background-color: #ffffff;
+  width: 1140px;
+  box-shadow: $shadow;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__block {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &:hover {
+    box-shadow: $shadowBox;
+    color: $text-color;
+  }
+}
+
+.select {
+  position: relative;
+  @media (max-width: $xs) {
+    width: 100%;
+  }
+}
+
+.menu {
+  width: 100%;
+}
+
+.options {
+  font-size: 14px;
+}
+.options {
+  width: 100%;
+}
+.wrapper_option {
+  display: flex;
+  justify-content: space-between;
+}
+.option_ram {
+  width: 70%;
+  font-size: 12px;
+}
+.options_price {
+  width: 20%;
+  color: #0073cf;
+  font-weight: bold;
+  font-size: 12px;
+}
+.options_active {
+  width: 10%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.spoiler {
+  width: 100%;
+  height: 100%;
+  display: none;
+  box-shadow: $shadow;
+  border-radius: 7px;
+  color: $light-text-color;
+  justify-content: center;
+  margin: 10px 0px;
+  @media (max-width: $xs) {
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+  .info {
+    padding-bottom: 15px;
+    @media (max-width: $md) {
+      padding-top: 15px;
+    }
+    @media (max-width: $xs) {
+      padding: 0 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+  &__box {
+    max-width: 1440px;
+    margin-left: -3px;
+    padding-top: 40px;
+  }
+
+  .details {
+    margin-left: 0;
+    margin-right: 5px;
+
+    &__li {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+    @media (max-width: $md) {
+      display: block;
+    }
+  }
+
+  .save_button {
+    background-color: transparent;
+    color: $primary-color;
+    margin-left: 0px;
+    margin-top: 53px;
+    font-size: 16px;
+    &:hover {
+      background-color: transparent !important;
+    }
+    @media (max-width: $md) {
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: $xs) {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+  }
+}
+
+.disk_info {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  @media (max-width: $xs) {
+    width: 90%;
+  }
+}
+
+.title {
+  width: 160px;
+
+  &_wrap {
+    display: flex;
+    align-items: baseline;
+    margin-right: 10px;
+  }
+
+  &_icon {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    color: $success-color;
+    margin-right: 12px;
+  }
+}
+
+.image_box {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-right: 3px;
+  position: relative;
+}
+
+.details {
+  display: flex;
+
+  &__list {
+    &:not(:last-child) {
+      margin-right: 20px;
+      min-width: 250px;
+    }
+  }
+
+  &__second {
+    margin-left: 185px;
+    @media (max-width: $md) {
+      margin-left: 0px;
+    }
+  }
+
+  &__li {
+    width: 300px;
+    .info {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      font-size: 14px;
+      width: 100%;
+    }
+    .image {
+      width: 60px;
+      height: 60px;
+      flex-shrink: 0;
+      margin-right: 24px;
+      position: relative;
+    }
+    &:not(:last-child) {
+      margin-bottom: 22px;
+    }
+  }
+}
+
+.bold {
+  font-weight: 700;
+  margin: 0 5px;
+}
+
+.button {
+  min-width: 191px;
+}
+.change_button {
+  background-color: transparent;
+  color: #3d4a62;
+  &:hover {
+    color: #3d4a62;
+    background-color: transparent !important;
+  }
+  @media (max-width: $md) {
+    position: absolute;
+    left: -50px;
+    font-size: 14px;
+    top: 60px;
+  }
+}
+.right_col {
+  margin-left: auto;
+  width: 191px;
+}
+
+.tariffs_prices {
+  margin-bottom: 22px;
+  padding-left: 50px;
+}
+
+@media (max-width: $md) {
+  .list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 5px;
+  }
+
+  .item {
+    padding: 30px 20px 30px 30px;
+    position: relative;
+    justify-content: space-between;
+    width: 708px;
+
+    &__block {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      flex-shrink: 0;
+    }
+
+    &__button {
+      left: -190px !important;
+      width: 191px;
+      bottom: 11px !important;
+    }
+  }
+
+  .title {
+    font-size: 21px;
+    margin: 0 0 30px;
+    width: 200px;
+
+    &_wrap {
+      margin-right: 10px;
+      width: 100%;
+      align-items: flex-start;
+      max-width: calc(100% - 130px);
+    }
+  }
+
+  .right_col {
+    width: 125px;
+    flex-shrink: 0;
+  }
+
+  .tariffs_prices {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 30px;
+    right: 230px;
+  }
+
+  .details {
+    width: 100%;
+    justify-content: start;
+
+    &__list {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+
+    &__li {
+      &:not(:last-child) {
+        width: 330px;
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .item {
+    padding: 30px 20px 75px;
+    width: calc(100vw - 40px);
+    display: block;
+    &__button {
+      left: 5% !important;
+      bottom: 15px !important;
+      width: 90%;
+      position: absolute;
+    }
+  }
+
+  .list {
+    padding-left: 30px;
+    padding-right: 30px;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    align-items: center;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    & ul {
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
+    &__li {
+      &:not(:last-child) {
+        width: 100%;
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  .title {
+    &_icon {
+      display: block;
+    }
+  }
+
+  .tariffs_prices {
+    right: 30px;
+    font-size: 16px;
+  }
+}
+
+.flex_cpu {
+  display: flex;
+  flex-wrap: wrap;
+}

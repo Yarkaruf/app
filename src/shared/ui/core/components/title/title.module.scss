@@ -1,0 +1,53 @@
+@import "/src/shared/ui/core/scss/var";
+
+.h1 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $text-color;
+}
+
+.h2 {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 55px;
+  color: $text-color;
+  text-align: center;
+}
+
+.h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $text-color;
+}
+
+.h4 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $text-color;
+}
+
+@media (max-width: $xs) {
+  .h1 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .h2 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .h3 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: $sx) {
+  .h2 {
+    font-size: 23px !important;
+  }
+}

@@ -1,0 +1,27 @@
+@import "/src/shared/ui/core/scss/var";
+
+.wrap {
+}
+
+.label {
+  margin-bottom: 4px;
+  padding-left: 16px;
+}
+
+.input {
+  width: 100%;
+  padding: 8px 16px;
+  background-color: #ffffff;
+  border: 1px solid $border-color;
+  border-radius: $radius;
+  font-size: 16px;
+  font-family: inherit;
+  line-height: 1;
+  color: $text-color;
+  height: 44px;
+  cursor: text;
+
+  &::placeholder {
+    color: $light-text-color;
+  }
+}

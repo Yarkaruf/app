@@ -1,0 +1,76 @@
+@import "/src/shared/ui/core/scss/var";
+
+.button {
+  color: $text-color;
+  font-family: inherit;
+  transition: 0.25s;
+  cursor: pointer;
+  text-align: left;
+
+  &:hover,
+  &.active {
+    color: $hover-color;
+  }
+
+  svg path {
+    fill: currentColor;
+  }
+
+  &.primary {
+    color: $primary-color;
+
+    &:hover,
+    &.active {
+      color: $hover-color;
+    }
+  }
+
+  &.dark {
+    &:hover,
+    &.active {
+      color: $primary-color;
+    }
+  }
+
+  &.light {
+    color: $light-text-color;
+
+    &:hover,
+    &.active {
+      color: $text-color;
+    }
+  }
+
+  &.white {
+    color: #fff;
+
+    &:hover,
+    &.active {
+      color: $light-text-color;
+    }
+  }
+
+  &._bordered {
+    border-bottom: 1px solid currentColor;
+
+    &:hover {
+      border-bottom-color: transparent;
+    }
+  }
+
+  &:disabled,
+  &.loading {
+    opacity: 0.6;
+    cursor: default;
+    border-bottom-color: transparent;
+  }
+}
+
+.loader {
+  margin-right: 10px !important;
+
+  &_wrap {
+    display: flex;
+    align-items: center;
+  }
+}

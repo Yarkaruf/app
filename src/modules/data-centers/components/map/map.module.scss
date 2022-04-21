@@ -1,0 +1,219 @@
+@import "/src/shared/ui/core/scss/var";
+
+.container {
+  width: 100%;
+  position: relative;
+  padding-top: 50%;
+  max-width: 1114px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.block_mobile {
+  display: none;
+}
+
+.item {
+  position: absolute;
+
+  &_1 {
+    top: 15.5%;
+    left: 12.7%;
+  }
+
+  &_2 {
+    top: 17.1%;
+    left: 46.3%;
+  }
+
+  &_3 {
+    top: 11.4%;
+    left: 58.1%;
+  }
+
+  &_4 {
+    top: 17.8%;
+    left: 60.7%;
+  }
+
+  &_5 {
+    top: 20.1%;
+    left: 79%;
+  }
+}
+
+.desktop_img {
+  img {
+    width: 200% !important;
+  }
+}
+
+.marker {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: rgba($light-text-color, 0.2);
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $light-text-color;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transition: $transition;
+  }
+
+  &.active {
+    background-color: rgba($primary-color, 0.2);
+    cursor: pointer;
+
+    &:after {
+      background-color: $primary-color;
+    }
+
+    &:hover {
+      &:after {
+        width: 90%;
+        height: 90%;
+      }
+    }
+  }
+}
+
+.city {
+  color: $primary-color;
+  font-size: 21px;
+  margin-bottom: 27px;
+}
+
+.address {
+  margin-bottom: 30px;
+}
+
+.datacenter {
+  margin-bottom: 5px;
+}
+
+.info {
+  color: $light-text-color;
+  margin-bottom: 28px;
+}
+
+@media (max-width: $xs) {
+  .container {
+    width: 100%;
+    position: relative;
+    padding-top: 0;
+    max-width: 767px;
+    margin: 0 auto;
+  }
+
+  .block_mobile {
+    display: block;
+    background: #fff;
+    padding: 20px 25px 28px 23px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: $shadow;
+    margin-bottom: 27px;
+    white-space: pre-line;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    &:hover {
+      box-shadow: $shadowBox;
+    }
+  }
+
+  .desktop_img {
+    display: none;
+  }
+
+  .item {
+    position: absolute;
+
+    &_1 {
+      top: 15.5%;
+      left: 12.7%;
+    }
+
+    &_2 {
+      top: 17.1%;
+      left: 46.3%;
+    }
+
+    &_3 {
+      top: 11.4%;
+      left: 58.1%;
+    }
+
+    &_4 {
+      top: 17.8%;
+      left: 60.7%;
+    }
+
+    &_5 {
+      top: 20.1%;
+      left: 79%;
+    }
+  }
+
+  .marker {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgba($light-text-color, 0.2);
+    position: relative;
+    display: none;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $light-text-color;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      transition: $transition;
+    }
+
+    &.active {
+      background-color: rgba($primary-color, 0.2);
+      cursor: pointer;
+
+      &:after {
+        background-color: $primary-color;
+      }
+
+      &:hover {
+        &:after {
+          width: 90%;
+          height: 90%;
+        }
+      }
+    }
+  }
+
+  .city {
+    color: $primary-color;
+    font-size: 21px;
+    margin-bottom: 27px;
+  }
+
+  .address {
+    margin-bottom: 30px;
+    white-space: pre-line;
+  }
+
+  .info {
+    color: $light-text-color;
+    margin-bottom: 28px;
+  }
+}

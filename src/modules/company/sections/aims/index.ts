@@ -1,0 +1,1 @@
+export * from "modules/company/sections/aims/aims.section";

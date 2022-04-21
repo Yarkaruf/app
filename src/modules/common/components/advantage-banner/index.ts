@@ -1,0 +1,1 @@
+export * from "modules/common/components/advantage-banner/advantage-banner";

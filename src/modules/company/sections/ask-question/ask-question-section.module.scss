@@ -1,0 +1,54 @@
+@import "/src/shared/ui/core/scss/var";
+
+.section_bc {
+  background-color: #fff;
+  margin-bottom: 76px;
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.title {
+  margin-right: 20px;
+}
+
+.text {
+  padding-top: 8px;
+  padding-right: 20px;
+}
+
+@media (max-width: $md) {
+  .section_bc {
+    background-color: #fff;
+    margin-bottom: 70px;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: calc(100vw - 156px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .title {
+    margin: 0 0 40px;
+  }
+}
+
+@media (max-width: $xs) {
+  .content {
+    max-width: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section_bc {
+    background-color: #fff;
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,143 @@
+@import "/src/shared/ui/core/scss/var";
+
+.section_pr {
+  background-color: #fff;
+  margin-bottom: 40px;
+  padding-top: 30px;
+}
+
+.title {
+  margin-bottom: 65px;
+  font-size: 36px !important;
+  line-height: 45px !important;
+  @media (max-width: $xs) {
+    margin-bottom: 30px;
+  }
+  @media (max-width: $xs) {
+    font-size: 23px !important;
+    font-size: 30px !important;
+    line-height: 37px !important;
+  }
+  @media (max-width: $sx) {
+    font-size: 23px !important;
+  }
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 50px;
+  @media (max-width: $md) {
+    justify-content: center;
+    padding: 0;
+  }
+}
+
+.item {
+  background: #ffffff;
+  box-shadow: $shadow;
+  border-radius: 5px;
+  display: flex;
+  width: 48%;
+  max-width: 500px;
+  margin: 10px;
+  padding: 30px 0px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  &:hover {
+    box-shadow: $shadowBox;
+  }
+  &_top {
+    border-bottom: 1.5px dashed #dee3f0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 37px 19px 37px;
+    @media (max-width: $md) {
+      padding: 0px 15px 19px 15px;
+    }
+    .name {
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 34px;
+      color: $primary-color;
+      @media (max-width: $md) {
+        font-size: 18px;
+      }
+      @media (max-width: $xs) {
+        font-size: 21px;
+      }
+    }
+    .price {
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 37px;
+      text-align: right;
+      color: $text-color;
+      @media (max-width: $md) {
+        font-size: 26px;
+      }
+      @media (max-width: $xs) {
+        font-size: 24px;
+      }
+    }
+    @media (max-width: $xs) {
+      flex-wrap: wrap;
+    }
+  }
+  &_bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 37px 39px 19px 39px;
+    @media (max-width: $md) {
+      flex-wrap: wrap;
+      padding: 37px 15px 9px 15px;
+    }
+    @media (max-width: $xs) {
+      flex-wrap: wrap;
+      padding: 37px 39px 9px 39px;
+    }
+    .time {
+      font-weight: bold;
+      font-size: 16px;
+      color: $light-text-color;
+      @media (max-width: $md) {
+        font-weight: normal;
+      }
+    }
+    .buttons {
+      background: #0073cf;
+      border-radius: 5px;
+      color: #fff;
+      max-width: 200px;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 13px 61px;
+      cursor: pointer;
+      height: 45px;
+      &:hover {
+        background: #073f92;
+      }
+      @media (max-width: $md) {
+        max-width: 100%;
+        margin-top: 25px;
+      }
+      @media (max-width: $xs) {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 15px;
+      }
+    }
+    @media (max-width: $md) {
+      flex-direction: column;
+    }
+  }
+  @media (max-width: $md) {
+    width: 45%;
+    padding: 30px 0 0px;
+  }
+  @media (max-width: $xs) {
+    padding-bottom: 10px;
+    width: 100%;
+  }
+}

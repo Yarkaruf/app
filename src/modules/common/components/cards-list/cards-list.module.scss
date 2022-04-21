@@ -1,0 +1,51 @@
+@import "/src/shared/ui/core/scss/var";
+
+.container {
+	display: flex;
+	justify-content: center;
+}
+
+.list {
+	display: grid;
+	grid-gap: 30px;
+	grid-template-columns: repeat(3, 1fr);
+	max-width: 848px;
+}
+
+.item {
+	position: relative;
+	background-color: #ffffff;
+	box-shadow: $shadow;
+	padding: 60px 20px 48px 55px;
+	border-radius: $radius;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 19px;
+		left: 19px;
+		width: 23px;
+		height: 23px;
+		background: url("/img/icons/check-round.svg") no-repeat;
+		background-size: contain;
+	}
+}
+
+@media (max-width: $md) {
+	.list {
+		grid-gap: 10px;
+		grid-template-columns: 1fr;
+		max-width: calc(100vw - 156px);
+	}
+
+	.item {
+		padding: 22px 34px 22px 65px;
+		align-items: flex-start;
+	}
+}
+
+@media (max-width: $xs) {
+	.list {
+		max-width: none;
+	}
+}

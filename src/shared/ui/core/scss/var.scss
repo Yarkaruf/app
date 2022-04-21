@@ -1,0 +1,32 @@
+//fonts
+$font: "Montserrat", sans-serif;
+
+//colors
+$primary-color: #0073cf;
+$hover-color: #073f92;
+
+$text-color: #3d4a62;
+$light-text-color: #a5b1c8;
+
+$border-color: #a5b1c8;
+$bg-color: rgba(3, 79, 169, 0.2);
+
+$alert-color: #eb5757;
+$success-color: #06c630;
+
+$dark2: #0e1126;
+
+//other
+$border: 1px solid $border-color;
+$radius: 5px;
+$transition: 0.25s;
+$shadow: 8px 20px 25px rgba(1, 46, 99, 0.15);
+$shadowBox: 10px 20px 30px rgba(1, 46, 99, 0.25);
+
+//media
+
+$lg: 1440px;
+$md: 1199px;
+$sm: 991px;
+$xs: 767px;
+$sx: 340px;

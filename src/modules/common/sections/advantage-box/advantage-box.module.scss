@@ -1,0 +1,62 @@
+@import "/src/shared/ui/core/scss/var";
+
+.advantage_banner_section_bc {
+  display: flex;
+  align-items: center;
+  max-width: none;
+  background-color: #dee3f0;
+  padding-top: 34px;
+  min-width: 200%;
+  margin-left: -49%;
+  max-height: none;
+  height: 410px;
+
+  @media (max-width: $md) {
+    display: block;
+    max-width: none;
+    height: 410px;
+    background-color: #dee3f0;
+    padding-top: 54px;
+    min-width: 113%;
+    margin-left: -65px;
+  }
+
+  @media (max-width: $xs) {
+    height: 410px;
+    display: block;
+    max-width: none;
+    min-width: 80%;
+    max-height: none;
+    margin: -20px;
+    margin-bottom: 10px;
+    background-color: #dee3f0;
+    padding-top: 34px;
+  }
+}
+
+.title {
+  width: 324px;
+  margin-bottom: 84px;
+  padding-top: 0;
+  margin-left: auto;
+  font-size: 28px;
+  margin-right: auto;
+  margin-top: -80px;
+
+  @media (max-width: $md) {
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -50px;
+  }
+
+  @media (max-width: $xs) {
+    margin-bottom: 50px;
+    max-width: 100%;
+    padding-top: 0;
+    padding-bottom: 30px;
+    font-size: 24px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

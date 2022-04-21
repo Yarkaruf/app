@@ -1,0 +1,52 @@
+@import "src/shared/ui/core/scss/var";
+
+.data_centers {
+  margin-top: 70px;
+  background-color: #fff;
+  margin-bottom: 100px;
+}
+
+.header {
+  margin-bottom: 10px;
+}
+
+.text {
+  max-width: 944px;
+
+  &_block {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: $md) {
+  .data_centers {
+    background-color: #fff;
+    margin-bottom: 100px;
+  }
+
+  .text {
+    max-width: calc(100vw - 156px);
+
+    &_block {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .data_centers {
+    background-color: #fff;
+  }
+  .header {
+    margin-top: -40px;
+  }
+  .text {
+    max-width: none;
+
+    &_block {
+      justify-content: flex-start;
+    }
+  }
+}

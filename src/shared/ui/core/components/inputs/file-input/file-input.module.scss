@@ -1,0 +1,57 @@
+@import "/src/shared/ui/core/scss/var";
+
+.container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 11px 24px;
+	background-color: #ffffff;
+	border: 1px solid $border-color;
+	border-radius: $radius;
+	font-size: 16px;
+	font-family: inherit;
+	line-height: 1;
+	color: $text-color;
+	min-height: 45px;
+	cursor: pointer;
+	box-shadow: none;
+	&:hover {
+		border-color: $text-color;
+
+		.icon {
+			color: $text-color;
+		}
+
+		.placeholder {
+			color: $text-color;
+		}
+	}
+}
+
+.input {
+	display: none;
+}
+
+.icon {
+	transition: $transition;
+	color: $light-text-color;
+	margin-right: 23px;
+	width: 9px;
+	height: 19px;
+}
+
+.placeholder {
+	color: $light-text-color;
+	transition: $transition;
+}
+
+@media (max-width: $xs) {
+
+	.container {
+		align-items: flex-start;
+	}
+
+	.icon {
+		margin-right: 10px;
+	}
+}

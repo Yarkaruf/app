@@ -1,0 +1,53 @@
+@import "src/shared/ui/core/scss/var";
+
+.container {
+  padding: 12px 20px 0;
+  margin: -40px -20px 40px;
+  box-shadow: 15px 15px 40px rgba(165, 177, 200, 0.4);
+  border-radius: 5px;
+
+  &.primary {
+    background-color: #ffffff;
+  }
+
+  &.warning {
+    background-color: $primary-color;
+  }
+
+  &.success {
+    background-color: $primary-color;
+  }
+
+  &.alert {
+    background-color: $alert-color;
+  }
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  & > * {
+    margin-bottom: 12px;
+  }
+}
+
+.message {
+  margin-right: 20px;
+}
+
+@media (max-width: $md) {
+  .container {
+    margin: -10px -20px 20px;
+  }
+}
+
+@media (max-width: $xs) {
+  .container {
+    margin: 10px 0 20px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

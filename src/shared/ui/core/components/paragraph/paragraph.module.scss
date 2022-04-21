@@ -1,0 +1,33 @@
+@import "/src/shared/ui/core/scss/var";
+
+.p1 {
+  font-size: 18px;
+  line-height: 1.3;
+  font-family: inherit;
+}
+
+.p2 {
+  font-size: 16px;
+  line-height: 1.3;
+  font-family: inherit;
+}
+
+.p3 {
+  font-size: 14px;
+  line-height: 1.3;
+  font-family: inherit;
+}
+
+.p4 {
+  font-size: 12px;
+  line-height: 1.3;
+  font-family: inherit;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.placeholder {
+  color: $light-text-color;
+}

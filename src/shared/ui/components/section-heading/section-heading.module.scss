@@ -1,0 +1,104 @@
+@import "src/shared/ui/core/scss/var";
+
+.container {
+  padding-left: 0px;
+
+  &.no_padding {
+    .description {
+      max-width: 1030px;
+    }
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title_vds {
+  width: 835px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.title {
+  width: 835px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.title_data {
+  .section-heading_title__1jlUs {
+    width: 835px;
+    margin-bottom: 24px;
+    text-align: left;
+  }
+}
+
+.description {
+  color: $light-text-color;
+
+  font-size: 21px;
+  line-height: 28px;
+  width: 630px;
+  max-width: 100%;
+  text-align: center;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: $md) {
+  .container {
+    display: block;
+    padding-left: 0;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title {
+    text-align: center;
+    width: 700px;
+    padding-bottom: 14px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: $xs) {
+  .container {
+    padding-left: 0;
+
+    &.no_padding {
+      padding-left: 0;
+    }
+
+    & > * {
+      max-width: none;
+    }
+  }
+
+  .title {
+    text-align: center;
+    max-width: 100%;
+    width: 100%; // TODO redesign dedic page
+    padding-bottom: 0px;
+
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .description {
+    text-align: center;
+
+    width: 335px;
+
+    font-size: 18px;
+    max-width: 100%;
+  }
+}

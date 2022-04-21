@@ -1,0 +1,39 @@
+@import "/src/shared/ui/core/scss/var";
+
+.link {
+  font-family: inherit;
+  transition: 0.25s;
+  cursor: pointer;
+
+  &:hover {
+    color: $primary-color;
+  }
+
+  svg path {
+    fill: currentColor;
+  }
+
+  &.bordered {
+    border-bottom: 1px solid $primary-color;
+
+    &:hover {
+      border-bottom-color: transparent;
+    }
+  }
+
+  &.primary {
+    color: $primary-color;
+
+    &:hover {
+      color: $hover-color;
+    }
+  }
+
+  &.dark {
+    color: $text-color;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}

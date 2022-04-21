@@ -1,0 +1,1 @@
+export * from "modules/common/components/advantages-list/advantages-list";

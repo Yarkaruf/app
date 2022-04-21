@@ -1,0 +1,46 @@
+@import "src/shared/ui/core/scss/var";
+
+.carousel {
+  overflow: visible !important;
+
+  & > div {
+    overflow: visible !important;
+  }
+}
+.carousel > ul.control-dots {
+  position: absolute;
+  display: none !important;
+  left: 97px;
+  bottom: 10px;
+  margin: 10px 0;
+  padding: 0;
+  text-align: end;
+  display: none;
+  width: 100%;
+  z-index: 999;
+}
+
+.dot {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: $light-text-color;
+  display: inline-block;
+  transition: $transition;
+  cursor: pointer;
+  left: 540px;
+  top: -165px;
+
+  &:not(:last-child) {
+    margin-right: 19px;
+  }
+
+  &.active {
+    background-color: #fff;
+  }
+  @media (max-width: $md) {
+    left: 0;
+    top: 40px;
+  }
+}

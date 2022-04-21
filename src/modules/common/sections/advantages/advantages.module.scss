@@ -1,0 +1,47 @@
+@import "/src/shared/ui/core/scss/var";
+
+.section_mb {
+  background-color: #fff;
+}
+
+.title {
+  margin-bottom: 150px;
+}
+
+.vds_server {
+  margin-bottom: -100px;
+}
+
+@media (max-width: $md) {
+  .vds_server {
+    margin-top: -155px;
+  }
+
+  .section_mb {
+    background-color: #fff;
+  }
+
+  .title {
+    margin-bottom: 80px;
+    margin-top: 238px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: $xs) {
+  .section_mb {
+    background-color: #fff;
+  }
+
+  .title {
+    margin-bottom: 100px;
+    font-weight: 700;
+    line-height: 36px;
+    max-width: 320px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

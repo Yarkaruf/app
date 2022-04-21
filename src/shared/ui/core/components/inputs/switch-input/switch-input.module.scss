@@ -1,0 +1,50 @@
+@import "/src/shared/ui/core/scss/var";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.label {
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+
+.input {
+  display: none;
+
+  & + .status {
+    width: 32px;
+    height: 20px;
+    border-radius: 999px;
+    background-color: $light-text-color;
+    position: relative;
+    flex-shrink: 0;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      transition: $transition;
+    }
+  }
+
+  &:checked {
+    & + .status {
+      background-color: $success-color;
+
+      &:before {
+        left: calc(100% - 2px);
+        transform: translateX(-100%);
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.icon_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  svg, path, circle {
+    fill: currentColor;
+  }
+
+  &.stroke {
+    svg,
+    path, circle {
+      fill: none;
+      stroke: currentColor;
+    }
+  }
+}
