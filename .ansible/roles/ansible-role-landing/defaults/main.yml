@@ -1,0 +1,7 @@
+medialand_landing_environment: "dev"
+
+medialand_landing_docker_registry_url: "{{ lookup('env', 'CI_SERVER_HOST') }}:4567"
+medialand_landing_docker_login: "{{ lookup('env', 'CI_REGISTRY_USER') }}"
+medialand_landing_docker_password: "{{ lookup('env', 'CI_JOB_TOKEN') }}"
+medialand_landing_container: "{{medialand_landing_docker_registry_url}}/medialand/hosting/front/medialand-landing:{{ lookup('env', 'CI_COMMIT_REF_NAME') }}"
+medialand_landing_environments: {}

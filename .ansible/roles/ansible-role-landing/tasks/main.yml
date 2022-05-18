@@ -1,0 +1,14 @@
+# deliver containers
+- name: Login to docker registry
+  docker_login:
+    registry_url: "{{ medialand_landing_docker_registry_url }}"
+    password: "{{medialand_landing_docker_password}}"
+    username: "{{medialand_landing_docker_login}}"
+- name: set up medialand-landing container
+  docker_container:
+    name: medialand-landing
+    state: started
+    pull: true
+    image: "{{medialand_landing_container}}"
+    published_ports:
+      - 8081:3000

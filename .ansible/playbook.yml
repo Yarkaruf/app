@@ -1,0 +1,5 @@
+- name: Deploy medialand landing
+  gather_facts: true
+  hosts: all
+  roles:
+    - ansible-role-landing

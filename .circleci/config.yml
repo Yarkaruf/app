@@ -1,0 +1,31 @@
+version: 2.1
+orbs:
+  node: circleci/node@3.0.0
+jobs:
+  build:
+    machine:
+      docker_layer_caching: true
+    steps:
+      - checkout
+      - run: echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
+      - run: docker build -t yoldispace/medialand-landing:$CIRCLE_BRANCH .
+      - run: docker push yoldispace/medialand-landing:$CIRCLE_BRANCH
+  deploy:
+    machine:
+      enabled: true
+    steps:
+      - run: ssh $SSH_USER@$SSH_HOST "docker pull yoldispace/medialand-landing:master"
+      - run: ssh $SSH_USER@$SSH_HOST "docker ps -q --filter name=medialand-landing | grep -q . && docker stop medialand-landing && docker rm -fv medialand-landing"
+      - run: ssh $SSH_USER@$SSH_HOST "docker run -dit --name medialand-landing -p 0.0.0.0:8081:3000 yoldispace/medialand-landing:master"
+
+workflows:
+  version: 2.1
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master

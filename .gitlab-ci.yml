@@ -1,0 +1,71 @@
+include:
+  - project: 'open-source/gitlab-templates'
+    file: '/.gitlab/ci/default-docker-before-script.gitlab-ci.yml'
+
+build:dev:
+  stage: build
+  script:
+    - cat stage.env >> .env
+    - docker-compose -f docker-compose.stage.yml build
+    - docker-compose -f docker-compose.stage.yml push
+  except:
+    refs:
+      - master
+      - tags
+
+build:stage:
+  stage: build
+  script:
+    - cat stage.env >> .env
+    - docker-compose -f docker-compose.stage.yml build
+    - docker-compose -f docker-compose.stage.yml push
+  only:
+    refs:
+      - master
+
+build:prod:
+  stage: build
+  script:
+    - cat prod.env >> .env
+    - docker-compose -f docker-compose.prod.yml build
+    - docker-compose -f docker-compose.prod.yml push
+  only:
+    - tags
+  except:
+    - branches
+
+deploy:new_stage:
+  stage: deploy
+  script:
+    - ANSIBLE_CONFIG=.ansible/ansible.cfg ansible-playbook -i .ansible/inventory/new/plain.yml -v .ansible/playbook.yml
+  only:
+    refs:
+      - landing-remaster
+  tags:
+    - sudo
+    - stage
+
+deploy:stage:
+  stage: deploy
+  script:
+    - ANSIBLE_CONFIG=.ansible/ansible.cfg ansible-playbook -i .ansible/inventory/stage/plain.yml -v .ansible/playbook.yml
+  only:
+    refs:
+      - master
+  tags:
+    - sudo
+    - stage
+
+deploy:prod:
+  stage: deploy
+  script:
+    - ANSIBLE_CONFIG=.ansible/ansible.cfg ansible-playbook -i .ansible/inventory/prod/plain.yml -v .ansible/playbook.yml
+  environment:
+    name: hypervisors in prod
+  only:
+    - tags
+  except:
+    - branches
+  tags:
+    - sudo
+    - prod
